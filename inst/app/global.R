@@ -23,3 +23,5 @@ source(file.path(getOption("radiant.path.basics"), "app/init.R"), encoding = get
 source(file.path(getOption("radiant.path.model"), "app/init.R"), encoding = getOption("radiant.encoding"), local = TRUE)
 source(file.path(getOption("radiant.path.multivariate"), "app/init.R"), encoding = getOption("radiant.encoding"), local = TRUE)
 options(radiant.url.patterns = make_url_patterns())
+
+options(radiant.init.data = list.files(path = "data/", full.names = TRUE))
