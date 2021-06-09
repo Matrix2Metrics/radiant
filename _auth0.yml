@@ -1,0 +1,7 @@
+name: matrix2metrics
+remote_url: 'https://www.matrix2metrics.com/M2M_Dashboard/'
+auth0_config:
+  api_url: !expr paste0('https://', Sys.getenv("AUTH0_USER_PROD"), '.us.auth0.com')
+  credentials:
+    key: !expr Sys.getenv("AUTH0_KEY_PROD")
+    secret: !expr Sys.getenv("AUTH0_SECRET_PROD")
