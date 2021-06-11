@@ -7,10 +7,11 @@ radiant <- function() {
   if (!"package:radiant" %in% search())
     if (!require(radiant)) stop("Calling radiant start function but radiant is not installed.")
 
-  library(auth0)
-  library(dotenv)
-  # runApp(system.file("app", package = "radiant"), launch.browser = TRUE)
-  shinyAppAuth0(system.file("app", package = "radiant"))
+  # library(auth0)
+  # library(dotenv)
+  runApp(system.file("app", package = "radiant"), launch.browser = TRUE)
+  # shinyAppAuth0(system.file("app/ui.R", package = "radiant"),
+  #               system.file("app/server.R", package = "radiant"))
 }
 
 #' Update Radiant
